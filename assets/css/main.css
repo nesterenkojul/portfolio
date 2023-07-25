@@ -2227,7 +2227,7 @@ input, select, textarea {
 
 				.image.right {
 					margin: 1.5em 0;
-					ax-width: 100%;
+					max-width: 100%;
 				}
 
 			}
