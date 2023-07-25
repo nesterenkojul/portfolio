@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>FoodBlocks - Julia Nesterenko</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper2">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>JN</strong></a>
+						<nav>
+							<a href="#menu"></a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Main</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+						<section>
+								<div class="inner">
+									<h1>FoodBlocks — recipe-building Telegram bot</h1>
+									<span class="image main"><img src="proj1/foodblocks_2.png" alt="pixels of food" /></span>
+									<p>This bot makes ingredient suggestions based on compatibility with the input ingredient. 
+										The main goal here is to reduce food waste by encouraging the user to use the bot to create a recipe with seemingly useless food items rather than throwing them out.</p>
+									<p>All project resources are available in the <a href="https://github.com/nesterenkojul/ingredients-bot"><i>GitHub repository</i></a> and here is a brief step-by-step description of the process.</p>
+									<ol>
+										<li>
+											<p>Scraped ingredient lists of 1.5k+ recipes from <a href="https://www.allrecipes.com">allrecipies.com</a> using Python libraries Requests and BeautifulSoup.</p>
+											<pre><code>import requests<br>from bs4 import BeautifulSoup</code></pre>
+										</li>
+
+										<li>
+											<p>With the SQLAlchemy library set up a SQLite-database of 11k+ ingredient pairs and the number of times they were used together, which is the main indicator of compatibility in this project.</p>
+										</li>
+
+										<li>
+											<p>Wrote a script for a Telegram bot using the Python library Telebot. The main functionality is suggesting pairings for the last ingredient provided.</p>
+											<pre><code>import telebot<br>bot = telebot.TeleBot("Bot id here")</code></pre>
+										</li>
+
+										<li>
+											<p>Created a custom bot in Telegram via <a href="https://t.me/BotFather">BotFather</a>. Connected this bot to the code using a bot id.</p>
+											<span class="image"><img src="proj1/botfather.png" alt="BotFather @ Telegram" height="520" width="400"/></span><br><br>
+										</li>
+
+										<li>
+											<p>Run the script and then started the bot in Telegram. The bot works while the script is running. The app should be deployed via any cloud service to make the bot fully functional.</p>
+											<video width="100%" height="height*52/40" controls>
+												<source src="/proj1/foodblocks_walkthrough.mp4" type=video/mp4>
+											</video>
+											<br><br>
+										</li>
+
+										<li>
+											<p>Additionally customized the bot's profile picture, which is a pixel-ized collage of images of food from old still life paintings.</p>
+											<span class="image"><img src="proj1/blocks.png" alt="FoodBlocks profile pic" height="400" width="400"/></span><br><br>
+										</li>
+
+										<li>
+											<p><i>Bonus</i><br><a href="https://youtu.be/fAHkJ_Dhr50">This video by Thu Wu</a> inspired a small research of acquired data exploring ingredient connections using graphs. For this, I used the Python library NetworkX. What I found was there are some top-tier ingredients like onion, sugar, butter, pepper, egg, and garlic. Moreover, clusterization highlighted two large ingredient groups, which I interpreted as 'Savory' (yellow) and 'Sweet and Baking' (blue).
+											</p>
+											<a href="proj1/network_groups.html" target=”_blank”>The interactive version of this graph is here</a>
+											<span class="image fit"><img src="proj1/network.png" alt="FoodBlocks profile pic" height="width*8/9"/></span><br><br>
+										</li>
+									</ol>
+									
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Julia Nesterenko 2023</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
