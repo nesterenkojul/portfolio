@@ -2225,6 +2225,11 @@ input, select, textarea {
 					margin: 1.5em 0;
 				}
 
+				.image.right {
+					margin: 1.5em 0;
+					ax-width: 100%;
+				}
+
 			}
 
 /* List */
