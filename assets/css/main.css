@@ -173,6 +173,22 @@ input, select, textarea {
 			color: #d8afaa !important;
 		}
 
+		/* Learn more links */
+
+		a.icon {
+			color: #d8afaa;
+		}
+
+		a.icon:hover {
+			border-bottom-color: transparent;
+			color: #ffffff !important;
+		}
+
+		a.icon:active {
+			border-bottom-color: transparent;
+			color: #ffffff !important;
+		}
+
 	strong, b {
 		color: #ffffff;
 		font-weight: 600;
