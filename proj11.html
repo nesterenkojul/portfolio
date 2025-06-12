@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PIDA - Playful Interface for Digital Archives - Julia Nesterenko</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper2">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>JN</strong></a>
+						<nav>
+							<a href="#menu"></a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Main</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+						<section>
+								<div class="inner">
+									<h1>PIDA - Playful Interface for Digital Archives</h1>
+									<span class="image main"><img src="proj11/archviz_header.jpg"/></span>
+									<p>
+										So, it's June of 2025, and my 4-year bachelor's program in Intelligent Systems in Humanities (aka Digital Humanities) program at ITMO University has come to an end. 
+										And in order to "drop the mic" for good, I had to write and defend my thesis (spoiler alert: luckily and hardworkingly defended and graduated with excellence).
+										<br><br>
+										In order to keep the nature of my work practical, I've decided to devote it to developing a web-based visualization instrument.
+										The topic was largely influenced by the 
+										<a href="https://codex-atlanticus.ambrosiana.it" target="_blank">Codex Atlanticus</a> 
+										project created by The Visual Agency for the Biblioteca Ambrosiana in Milan.
+										However, the main objective of my endeavour was to make the tool universally applicable to any custom digital collection.
+
+										<blockquote style="opacity: 0.5">
+											Other sources of inspiration worth mentioning are:<br>
+											<li><a href="http://wcma-explorer.williams.edu" target="_blank"><b>WCMA Collection Explorer</b></a></li>
+											<li><a href="https://uclab.fh-potsdam.de/ projects/deutsche-digitale-bibliothek-visualisiert" target="_blank"><b>Deutsche Digitale Bibliothek Visualised</b> by Urban Complexity Lab</a></li>
+											<li><a href="https://uclab.fh-potsdam.de/projects/coins" target="_blank"><b>Coins</b> by Urban Complexity Lab</a></li>
+											<li><a href="https://joutwater.github.io/Major-Studio-1/REMBRANDT_QUAL" target="_blank"><b>Rembrandt : Zelfportrets</b> by John Outwater for The Metropolitan Museum</a></li>
+										</blockquote> 
+
+										I started with hand-drawn sketches of the interface to determine the overall look and the usage scenario 
+										(yeah, cringe but it's the genuine workflow, baby).<br><br>
+										
+										<table>
+											<tr style="opacity: 0.5; font-size: small; text-align: center;">
+												<td>Uploading files</td>
+												<td>Choosing parameters</td>
+												<td>Item card</td>
+											</tr>
+											<tr>
+												<td><img src="proj11/sketches/sketch_1.jpg" width="100%"/></td>
+												<td><img src="proj11/sketches/sketch_2.jpg" width="100%"/></td>
+												<td><img src="proj11/sketches/sketch_6.jpg" width="100%"/></td>
+											</tr>	
+											<tr style="opacity: 0.5; font-size: small; text-align: center;">
+												<td>Two axes</td>
+												<td>One axis</td>
+												<td>No axes</td>
+											</tr>
+											<tr>
+												<td><img src="proj11/sketches/sketch_3.jpg" width="100%"/></td>
+												<td><img src="proj11/sketches/sketch_4.jpg" width="100%"/></td>
+												<td><img src="proj11/sketches/sketch_5.jpg" width="100%"/></td>
+											</tr>	
+										</table>
+
+										For the development part I continued with my humble beginnings in the D3.js library started in the 
+										<a href="proj10.html" target="_blank">Geography of Ancient Russian Singing Centers</a> project.
+										<br><br>
+										Here is a list of main features of the instrument:
+										<ol>
+											<li>User uploads a collection of images and/or PDF files + a CSV file with metadata about each file through the local file reader.</li>
+											<li>For each parameter in the CSV file it is automatically evaluated which visualisation methods are applicable to it. 
+												Then the user chooses which ones and how they want to display on the chart.</li>
+											<li>The chart is constructed along with filters, item cards (displayed on click) and groupings of overlay items.</li>	
+										</ol>
+										The demo below shows it better than words.
+										<video width="100%" controls>
+											<source src="proj11/archviz_demo.mp4" type=video/mp4>
+										</video><br><br>
+
+										Finally, I scraped test datasets from:<br>
+											<li><a href="https://www.kci.or.jp/en/archives/digital_archives" target="_blank">The Kyoto Costume Institute Digital Archive</a></li>
+											<li><a href="https://www.digitalcollections.manchester.ac.uk/collections/historyofmedicine_mmh" target="_blank">The University of Manchester's Museum of Medicine and Health collection</a></li>
+											<li><a href="https://digitalcollections.nypl.org/collections/2b332a20-e136-0132-f347-58d385a7bbd0#/" target="_blank">German old master prints from the New York Public Library Digital Collections</a></li>
+										<br>
+										Then I performed a simulation of how potential users might use the tool with this data. 
+										<table>
+											<thead style="opacity: 0.5; font-size: small; text-align: center;">
+												<td>Kyoto Costume Institute</td>
+												<td>Museum of Medicine and Health</td>
+												<td>German old master prints from NYPL</td>
+											</thead>
+											<tr>
+												<td><img src="proj11/sc_kyoto/1.jpg" width="100%"/></td>
+												<td><img src="proj11/sc_man/1.jpg" width="100%"/></td>
+												<td><img src="proj11/sc_nypl/1.jpg" width="100%"/></td>
+											</tr>	
+											<tr>
+												<td><img src="proj11/sc_kyoto/2.jpg" width="100%"/></td>
+												<td><img src="proj11/sc_man/2.jpg" width="100%"/></td>
+												<td><img src="proj11/sc_nypl/2.jpg" width="100%"/></td>
+											</tr>	
+											<tr>
+												<td><img src="proj11/sc_kyoto/3.jpg" width="100%"/></td>
+												<td><img src="proj11/sc_man/3.jpg" width="100%"/></td>
+												<td><img src="proj11/sc_nypl/3.jpg" width="100%"/></td>
+											</tr>	
+										</table>
+
+										<b>
+											The most important link #1: <a href="https://nesterenkojul.github.io/pida/" target="_blank">demo version of the web app</a><br><br>
+											The most important link #2: <a href="https://github.com/nesterenkojul/pida" target="_blank">code repository</a><br><br>
+											The most important link #3: <a href="https://drive.google.com/file/d/15OlEUBiRI1cXF9y1hwHb1b-zMcZycelN/view?usp=share_link" target="_blank">full text of the thesis</a><br>
+										</b>
+
+										<sup style="opacity: 0.5"><i>It contains an in-depth description of the development process and the research behind it, but was written in Russian. So promising to work on the translation soon.</i></sup>
+										
+									</p>
+								</div>	
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Julia Nesterenko 2025</li><li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
